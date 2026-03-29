@@ -3,6 +3,7 @@ export type Product = {
   name: string;
   buyingPrice: number;
   sellingPrice: number;
+  websiteLink?: string;
   createdAt: string;
 };
 

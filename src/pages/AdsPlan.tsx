@@ -162,6 +162,16 @@ export default function AdsPlan() {
                     </div>
 
                     <div className="flex items-center space-x-4" onClick={(e) => e.stopPropagation()}>
+                      {product.websiteLink && (
+                        <a 
+                          href={product.websiteLink} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="hidden sm:flex items-center text-xs font-medium text-blue-600 hover:text-blue-800 bg-blue-50 px-2 py-1 rounded border border-blue-100"
+                        >
+                          Website <ExternalLink className="h-3 w-3 ml-1" />
+                        </a>
+                      )}
                       <select
                         value={status}
                         onChange={(e) => handleStatusChange(ad?.id, product.id, e.target.value as AdStatus)}
